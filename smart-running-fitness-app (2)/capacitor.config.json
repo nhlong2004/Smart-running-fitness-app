@@ -1,0 +1,26 @@
+{
+  "appId": "com.runmate.app",
+  "appName": "RunMate",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#10b981",
+      "showSpinner": false,
+      "splashFullScreen": true,
+      "splashImmersive": true
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon",
+      "iconColor": "#10b981"
+    },
+    "Geolocation": {}
+  },
+  "android": {
+    "allowMixedContent": true,
+    "backgroundColor": "#10b981"
+  }
+}

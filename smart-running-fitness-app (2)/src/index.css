@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-purple-500: #a855f7;
+  --color-red-500: #ef4444;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+  --color-pink-500: #ec4899;
+  --color-cyan-500: #06b6d4;
+  --color-amber-500: #f59e0b;
+  --color-indigo-500: #6366f1;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0fdf4;
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+#root {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: white;
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes swipeOutLeft {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-30%); opacity: 0; }
+}
+
+@keyframes swipeOutRight {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(30%); opacity: 0; }
+}
+
+@keyframes swipeIn {
+  0% { transform: translateX(8%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.animate-swipeOutLeft {
+  animation: swipeOutLeft 0.2s ease-in forwards;
+}
+
+.animate-swipeOutRight {
+  animation: swipeOutRight 0.2s ease-in forwards;
+}
+
+.animate-swipeIn {
+  animation: swipeIn 0.25s ease-out forwards;
+}
